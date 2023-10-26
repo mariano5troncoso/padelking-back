@@ -7,7 +7,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import cors from 'cors' //permite origenes cruzados (el front con el back)
 import indexRouter from './routes/index.js';
-import usersRouter from './routes/users.js';
+
 
 import { __dirname } from './bin/utils.js';
 
@@ -24,8 +24,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors()) //obliga al servidor a permitir el cruce de origenes el fron con el back
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+
+app.use('/api', indexRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
