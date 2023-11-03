@@ -1,12 +1,13 @@
 import express from 'express';
-import userRouter from './users.js'
-
+import userRouter from './auth.js';
 
 const router = express.Router();
 
-router.use('/auth', userRouter) // Le pido a mi enrutador principal a utilizar las rutas del enrutador con el endpoint auth
-//router.use('/products', productsRouter)
-router.get('/', function(req, res, next) {
+// Monta las rutas del usuario bajo el prefijo /api/auth
+router.use('/auth', userRouter);
+
+// Ruta principal
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
