@@ -15,10 +15,10 @@ let product_router = Router();
 
 product_router.get("/", read);
 product_router.get("/readadmin", readadmin);
-product_router.post("/create", /*passport.authenticate('jwt', { session: false }),*/ validator(productCreate), create)
+product_router.post("/create",  validator(productCreate), create)
 product_router.get("/:id", read_one)
-product_router.put("/update/:id", /*passport.authenticate('jwt', { session: false }), is_property_of_products,*/ update)
-product_router.delete("/delete/:id", /*passport.authenticate('jwt', { session: false }), is_property_of_products,*/ remove)
+product_router.put("/update/:id", update)
+product_router.delete("/delete/:id", remove)
 
 
 export default product_router;
