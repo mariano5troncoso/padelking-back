@@ -8,8 +8,6 @@ import logger from 'morgan';
 import cors from 'cors' //permite origenes cruzados (el front con el back)
 import indexRouter from './routes/index.js';
 import product_router from './routes/products.js'
-import read from './controllers/products/read.js';
-import readadmin from './controllers/auth/read.js';
 import { __dirname } from './bin/utils.js';
 
 

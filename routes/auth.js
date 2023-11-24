@@ -19,6 +19,10 @@ import signinToken from '../controllers/auth/signinToken.js'
 import verify_email from '../controllers/auth/verify_email.js'
 
 
+import express from 'express';
+const router = express.Router();
+
+
 let auth_router = Router()
 
 auth_router.get('/', read)
