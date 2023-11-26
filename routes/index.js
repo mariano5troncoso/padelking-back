@@ -6,6 +6,7 @@ const router = express.Router();
 // Monta las rutas del usuario bajo el prefijo /api/auth
 router.use('/auth', userRouter);
 
+
 // Ruta principal
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
