@@ -10,6 +10,7 @@ import productCreate from "../schemas/product/productCreate.js"
 
 import read from "../controllers/products/read.js";
 import readadmin from "../controllers/auth/read.js";
+import Accesorios from "../models/Accesorios.js"
 
 let product_router = Router();
 

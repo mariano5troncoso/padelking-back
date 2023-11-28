@@ -9,6 +9,7 @@ import cors from 'cors' //permite origenes cruzados (el front con el back)
 import indexRouter from './routes/index.js';
 import product_router from './routes/products.js'
 import { __dirname } from './bin/utils.js';
+import accesorios_router from './routes/accessories.js';
 
 
 var app = express();
@@ -27,6 +28,8 @@ app.use(cors()) //obliga al servidor a permitir el cruce de origenes el fron con
 
 app.use('/api', indexRouter);
 app.use('/api/products', product_router);
+app.use('/api/paletas', product_router);
+app.use('/api/accessories', accesorios_router);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
